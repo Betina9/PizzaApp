@@ -51,6 +51,11 @@ function placeOrder(pizzaName: string) {
   return newOrder;
 }
 
+function addToArray<Type>(array: Type[], item: Type): Type[] {
+  array.push(item);
+  return array;
+}
+
 function completeOrder(orderId: number) {
   const order = orderQueue.find((order) => order.id === orderId);
   if (!order) return null;
